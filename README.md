@@ -4,20 +4,20 @@ Custom agent skills maintained by telnicky. Each skill has its own folder under 
 
 | Skill | Purpose |
 | --- | --- |
-| [create-training-artifact](skills/create-training-artifact/SKILL.md) | Create concise visual training guides with concrete examples and optional supporting detail. |
+| [visual-guide](skills/visual-guide/SKILL.md) | Create concise visual training guides with concrete examples and optional supporting detail. |
 
 ## Use in Codex
 
 Ask Codex to install the skill from this repository:
 
 ```text
-Install create-training-artifact from telnicky/skills at skills/create-training-artifact.
+Install visual-guide from telnicky/skills at skills/visual-guide.
 ```
 
 Private repositories require an account with access. After installation, the skill is available on the next turn. Invoke it with a request such as:
 
 ```text
-Use $create-training-artifact to turn these process notes into a concise visual training guide for new staff.
+Use $visual-guide to turn these process notes into a concise visual training guide for new staff.
 ```
 
 ## Add a skill

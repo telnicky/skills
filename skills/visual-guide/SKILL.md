@@ -1,9 +1,9 @@
 ---
-name: create-training-artifact
+name: visual-guide
 description: Create or revise concise visual training guides for onboarding, guided walkthroughs, and teaching a system, process, or policy. Use when the user wants a training artifact with concrete examples and optional supporting detail. Ordinary explanatory answers do not need this skill.
 ---
 
-# Create a training artifact
+# Visual guide
 
 Produce a guide that lets a reader explain the main rule and apply it to a new example without reading the implementation details. Support independent reading and a live walkthrough.
 
