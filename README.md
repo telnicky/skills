@@ -4,6 +4,7 @@ Custom agent skills maintained by telnicky. Each skill has its own folder under 
 
 | Skill | Purpose |
 | --- | --- |
+| [tldraw-diagram](skills/tldraw-diagram/SKILL.md) | Create editable architecture and user-journey diagrams with bound arrows and SVG previews. |
 | [railscast](skills/railscast/SKILL.md) | Teach a topic through short lessons that build on one concrete example. |
 | [visual-guide](skills/visual-guide/SKILL.md) | Create concise visual training guides with concrete examples and optional supporting detail. |
 

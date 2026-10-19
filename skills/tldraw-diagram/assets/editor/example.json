@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id":"customer","label":"Customer\nSubmits order","role":"actor","row":0,"col":0},
+    {"id":"api","label":"Order API\nValidates request","role":"service","row":0,"col":1},
+    {"id":"inventory","label":"Stock?","role":"decision","row":0,"col":2},
+    {"id":"confirmed","label":"Order confirmed","role":"outcome","row":0,"col":3},
+    {"id":"orders","label":"Orders database","role":"store","row":1,"col":1},
+    {"id":"waitlist","label":"Offer waitlist","role":"outcome","row":1,"col":2}
+  ],
+  "edges": [
+    {"from":"customer","to":"api","label":"Place order"},
+    {"from":"api","to":"inventory","label":"Check stock"},
+    {"from":"inventory","to":"confirmed","label":"Available"},
+    {"from":"inventory","to":"waitlist","label":"Unavailable"},
+    {"from":"api","to":"orders","label":"Save request"}
+  ]
+}
