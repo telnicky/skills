@@ -4,6 +4,7 @@ Custom agent skills maintained by telnicky. Each skill has its own folder under 
 
 | Skill | Purpose |
 | --- | --- |
+| [night-shift](skills/night-shift/SKILL.md) | Ticket updates and review-readiness evidence for night-shift coding tasks. |
 | [tldraw-diagram](skills/tldraw-diagram/SKILL.md) | Create editable architecture and user-journey diagrams with bound arrows and SVG previews. |
 | [railscast](skills/railscast/SKILL.md) | Teach a topic through short lessons that build on one concrete example. |
 | [visual-guide](skills/visual-guide/SKILL.md) | Create concise visual training guides with concrete examples and optional supporting detail. |
@@ -23,6 +24,10 @@ Private repositories require an account with access. After installation, the ski
 Use $visual-guide to turn these process notes into a concise visual training guide for new staff.
 Use $railscast to teach me how database indexes work.
 ```
+
+## Night-shift use
+
+For a night-shift launch or continuation, include `Use $night-shift for ticket updates and review readiness.` in the task prompt. Claude Code can invoke the same installed skill as `/night-shift`. This applies only to night shifts.
 
 ## Add a skill
 
