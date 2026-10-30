@@ -1,65 +1,61 @@
 ---
 name: visual-guide
-description: Create or revise concise visual training guides for onboarding, guided walkthroughs, and teaching a system, process, or policy. Use when the user wants a training artifact with concrete examples and optional supporting detail. Ordinary explanatory answers do not need this skill.
+description: Create or revise brief visual guides for ownership maps, summaries, comparisons, onboarding, and process explanations. Use when the user wants a visual artifact with a clear main answer and optional supporting detail. Ordinary text answers do not need this skill.
 ---
 
 # Visual guide
 
-Produce a guide that lets a reader explain the main rule and apply it to a new example without reading the implementation details. Support independent reading and a live walkthrough.
+Make the main answer easy to find in ten seconds and the overview easy to understand in about a minute. These are design targets, not measured results. Let the visual carry the explanation.
 
-When the format is unspecified, use a scrolling presentation with a short sequence of visual lessons. Follow a requested format such as a slide deck or document. Use available format-specific tools and skills for implementation and delivery. Keep their publishing and authorization rules; this skill does not grant separate permission to publish.
+## Choose the smallest useful form
 
-## Establish the lesson
+Infer the reader, their main question, and the source of truth. Write the answer in one sentence before designing. Ask only for missing information that would materially change it.
 
-Infer the audience, prior knowledge, learning outcome, source material, essential rules, and delivery context from the request. Ask only for missing information that would materially change the artifact. Do not require an intake questionnaire.
+- **Compact reference is the default:** use it for ownership, summaries, comparisons, and decisions. Start with the answer and one useful map, table, or grouped view.
+- **Teaching guide:** use it when readers must learn a process or apply a rule. Start with the rule or outcome, introduce necessary concepts, then show the smallest example that makes the behavior clear. Add a contrasting case only when it explains an important boundary.
 
-Write one sentence stating what the reader should understand or do after the guide. Use it to decide which sections belong.
+Follow the requested format and depth. If unspecified, use a small, self-contained HTML page with normal scrolling. Use available format tools when needed; they must not add extra sections or features to the brief. Publishing requires the user's authorization.
 
-Distinguish current behavior, proposed changes, assumptions, and open decisions. Check unexplained differences in the model before teaching it as settled. Ground technical claims in the supplied material or inspected sources. Clearly label fictional examples.
+## Budget the content
 
-## Build the teaching sequence
+For a compact reference, aim for roughly **200–300 words across the default visible page**, including headings and visual labels. Do not pad a smaller answer. Aim for at most about **100 words in a selected detail panel**; put long inventories in a clearly named disclosure or reference. Treat these as editing targets: preserve requested coverage and facts that change a decision, and allow more depth for a teaching task.
 
-Introduce concepts before examples that depend on them. For a system explanation, a useful order is objects, relationships, behavior, then implementation when needed. Adapt the sequence to the subject.
+Give each fact one primary home. A map, team card, paragraph, and example should not all repeat the same assignment. Details must add information. Keep necessary navigation labels and identifiers consistent even when they recur.
 
-Give each section one main teaching point. Use a heading that states the lesson, a short introduction, a primary visual, and a takeaway when useful. Read the headings in order to check that the explanation develops coherently. Do not force a fixed section count or duplicate the same point in every element.
+Ground claims in supplied or inspected sources. Keep current facts, proposals, assumptions, and open decisions distinct. A caveat that changes the main answer belongs beside that answer, even if the evidence is in a detail section.
 
-Choose the smallest example set that shows the rule and its important boundary. Reuse people, objects, IDs, and relationships across sections. Label a separate hypothetical case when its facts differ. Include an outcome that does not qualify, or an exception, when that distinction matters to the lesson.
+## Make the answer visible
 
-For an annotated example of these decisions, read [the reference artifact](references/annotated-example.md). Use it when choosing the sequence or reviewing clarity. It explains the method without requiring access to the original site.
+Choose the visual that does the most explanatory work:
 
-## Make the explanation visible
+- Grouped boxes and labeled connections for ownership or relationships.
+- Tables or aligned rows for comparisons and boundaries.
+- Short flows or timelines for sequence and change.
 
-Select a visual for the relationship being taught:
+Use headings that state a fact or name something the reader needs to find. Prefer “Platform owns tasks and account access” to “Give each team a complete outcome.” Use concrete nouns, active verbs, and stable terms.
 
-- Give distinct objects their own boxes. Use grouping and labeled connections to show ownership or hierarchy.
-- Show inclusion and exclusion with visible groups and text labels.
-- Compare similar cases side by side or in a short table.
-- Use timelines for order and duration. Use record diagrams only when storage relationships help this audience.
-- Add a small interaction when changing a condition teaches the rule. Update the result and explanation together.
+Add prose only where the visual leaves a necessary question unanswered. Do not automatically add an introduction, takeaway, hero slogan, or instructions for reading the page. Use spacing and alignment before adding more cards, borders, or decoration. Follow the user's design system.
 
-Keep the visual vocabulary and terminology consistent. Explain what a relationship means in the example. Technical field labels should not imply a false fact about a person or object.
+Add interaction only when it helps the reader find information, compare cases, or understand a change. Preserve readable type, keyboard access, and labels that work without color. Reflow ordinary content on phones; allow a large diagram its own scroll region. Do not shrink text or force a fixed slide height to meet the word budget.
 
-Use readable type, generous space around labels, and text or symbols alongside color. Keep ordinary content readable on a phone. Let a large diagram scroll within its own region. Do not shrink the whole lesson or force scroll snapping to fit a fixed slide height.
+## Keep depth available
 
-## Disclose detail progressively
+Make the overview work with details closed. Use specific labels such as “Assigned roles” or “Why access is denied.” Prefer one level of disclosure; use notes or appendices in static formats.
 
-Make the main sequence understandable with all supporting sections closed. Put record examples, code, queries, evidence, and detailed rules in clearly named expandable sections. Use appendices, notes, or reference pages for formats without expansion.
+Include examples only to resolve likely confusion. Label hypothetical facts and reuse the same people and objects when comparing outcomes. Explain behavior before implementation. Remove duplicate information before hiding anything; do not conceal an essential boundary merely to shorten the page.
 
-Explain the concrete example before its implementation. Prefer peer detail sections to nested drawers. Use short steps, readable record cards, or small tables inside them. A detail section must answer a specific question.
+Read [the annotated examples](references/annotated-example.md) when choosing between reference and teaching formats, or when a draft is too long.
 
-Add a full reference diagram or evidence appendix only when it supports the task. Keep proposed architecture distinct from existing implementation. Do not add quizzes, dashboards, decorative illustrations, or extra pages merely to fill out the artifact.
+## Edit, verify, deliver
 
-## Review and deliver
+Before styling, remove repeated claims, headings that repeat introductions, unnecessary examples, and controls without a reader task. Then check:
 
-Check the lesson before polishing its appearance:
+- Can the reader locate the main answer in ten seconds?
+- Can they understand the overview with all details closed?
+- Are important exceptions and open decisions still visible?
+- For a teaching guide, can they apply the rule to a different case?
+- Do the visual, labels, details, and source agree?
 
-- Can the reader state the rule and explain two meaningfully different outcomes from the main sequence?
-- Can the reader predict what changes when one relevant condition changes?
-- Do text, diagrams, examples, and interactive results agree? Details should add depth without correcting a misleading simplification.
-- Does every section help the learning outcome? Remove repetition and unnecessary examples.
+When content changes, update affected navigation, counts, examples, and links. Verify the rendered artifact, including relevant controls, links, keyboard use, and desktop/phone layout. Fix observed issues in a batch; repeat checks for fixes or unresolved concerns. Use an independent reader review when the subject warrants it.
 
-When a model changes, update its text, visuals, interactions, examples, and appendices together. When a section is removed, update navigation, counts, links, and affected build checks.
-
-Verify the actual output, including links, controls, keyboard use, and responsive layout where relevant. Use meaningful checks rather than tests of exact prose. For a complex subject, a short independent reader review can check understanding and application.
-
-Deliver the completed artifact in the requested form. Report what was checked and any material limitation. Preserve the user's scope and sharing requirements.
+Deliver the artifact with a brief description of what it answers and any material limitation. Keep the completion message short.

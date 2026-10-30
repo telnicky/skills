@@ -1,4 +1,4 @@
 interface:
   display_name: "Visual Guide"
-  short_description: "Create concise visual training guides"
-  default_prompt: "Use $visual-guide to turn this material into a concise visual training guide."
+  short_description: "Create brief visual guides with optional detail"
+  default_prompt: "Use $visual-guide to make the main answer clear at a glance, with supporting detail available when needed."
