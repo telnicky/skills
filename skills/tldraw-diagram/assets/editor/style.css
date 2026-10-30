@@ -1,0 +1,7 @@
+body { margin: 0; font: 14px system-ui, sans-serif; color: #20242a; }
+header { min-height: 56px; box-sizing: border-box; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 12px 16px; border-bottom: 1px solid #ddd; }
+button, .button { font: inherit; border: 1px solid #aeb6c2; border-radius: 6px; background: white; padding: 7px 10px; cursor: pointer; }
+input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+#root { display: flex; flex-direction: column; height: 100vh; }
+#root > main { position: relative; flex: 1; min-height: 0; }
+[role=status] { flex: 1; min-width: 280px; font-size: 12px; }

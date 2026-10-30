@@ -1,0 +1,13 @@
+interface:
+  display_name: "Railscast"
+  short_description: "Learn any topic through small, connected demonstrations"
+  default_prompt: "Use $railscast to teach me this topic through short lessons that build on one concrete example."
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - "chatgpt"
+  - "codex"
+  - "api"
+  - "atlas"
+  allow_implicit_invocation: true
