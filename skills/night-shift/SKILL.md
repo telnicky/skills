@@ -34,6 +34,16 @@ Run AutoQA twice for every Night Shift PR, alongside the existing testing, revie
 
 For both runs, record tested base/head commit IDs, planned and completed coverage, row results and evidence paths. Distinguish `PASS`, `PRODUCT FAILURE`, `BLOCKED` and `NOT RUN`. Evidence must show the asserted behavior. UI changes require real browser/device evidence; unit/component checks do not count as live UI. When the app, tools, fixtures or other prerequisites are absent, report the exact blocker and untested coverage. Never declare a pass for blocked or unrun checks.
 
+## Second-model bug review
+
+For each selected Night Shift PR ready for bug review, check existing manual and automated requests and reviews by PR and head SHA. Reuse existing requests and completed or in-progress reviews; only post `@claude review` when none exists for that head. For the bot path, verify its actual response and completed review cover the current head; a posted request alone is not completion.
+
+Check status through a reasonable bounded wait. If the bot fails, is unavailable, or gives no response by the deadline, fall back to a separate Claude thread on the user's Mac. Confirm no bot review is active before fallback; never run both paths concurrently for the same head. An active bot review remains pending.
+
+For local fallback, select exactly `Fable 5.1` with `Medium` effort and verify the actual selection before sending. If either option is unavailable or cannot be verified, report the step blocked and ask for a supported choice; do not substitute a model or claim completion.
+
+Both paths request bug review and actionable feedback posted to the PR, not approval or merge. Record the reviewed SHA, request/thread and result/review links, and actual model/effort where available. Do not claim the bot used the requested model without evidence; its model may not be configurable. Verify findings before fixes; material fixes require review of the resulting head. Keep existing validation and draft-state gates.
+
 ## Ready for human review
 
 - Prefer the simplest implementation that completes the agreed scope. Preserve behavior, user changes and unrelated work.
