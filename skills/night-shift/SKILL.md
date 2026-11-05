@@ -36,9 +36,13 @@ For both runs, record tested base/head commit IDs, planned and completed coverag
 
 ## Second-model bug review
 
-For each selected Night Shift PR, use a separate Claude thread on the user's Mac to review for bugs and post actionable feedback to that PR. Before launching, check existing manual and automated reviews by PR and head SHA; reuse an existing or in-progress review for that head instead of duplicating it. This authorizes review feedback, not approval or merge.
+For each selected Night Shift PR ready for bug review, check existing manual and automated requests and reviews by PR and head SHA. Reuse existing requests and completed or in-progress reviews; only post `@claude review` when none exists for that head. For the bot path, verify its actual response and completed review cover the current head; a posted request alone is not completion.
 
-Select exactly `Fable 5.1` with `Medium` effort and verify the actual selection before sending. If either option is unavailable or cannot be verified, report this review step blocked and ask for a supported choice; do not substitute a model or claim completion. Record the reviewed SHA, actual model and effort, thread link and posted review links. Verify findings before fixing them. Material fixes require review of the resulting head. Keep the existing validation and draft-state gates.
+Check status through a reasonable bounded wait. If the bot fails, is unavailable, or gives no response by the deadline, fall back to a separate Claude thread on the user's Mac. Confirm no bot review is active before fallback; never run both paths concurrently for the same head. An active bot review remains pending.
+
+For local fallback, select exactly `Fable 5.1` with `Medium` effort and verify the actual selection before sending. If either option is unavailable or cannot be verified, report the step blocked and ask for a supported choice; do not substitute a model or claim completion.
+
+Both paths request bug review and actionable feedback posted to the PR, not approval or merge. Record the reviewed SHA, request/thread and result/review links, and actual model/effort where available. Do not claim the bot used the requested model without evidence; its model may not be configurable. Verify findings before fixes; material fixes require review of the resulting head. Keep existing validation and draft-state gates.
 
 ## Ready for human review
 
